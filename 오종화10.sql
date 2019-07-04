@@ -7,6 +7,7 @@ CREATE TABLE CUSTOMER
  ,birthyear        NUMBER  
  ,regdate          DATE         DEFAULT sysdate
  ,address          VARCHAR2(30)
+ ,CONSTRAINT  pk_userid PRIMARY KEY(userid)
 );
 -- Table CUSTOMER이(가) 생성되었습니다.
 
@@ -46,15 +47,15 @@ ADDRESS            VARCHAR2(30)
 -- 실습 5)
 CREATE TABLE SALESMAN
 AS
-SELECT e.job
+SELECT e.*
   FROM emp e
  WHERE e.job = 'SALESMAN'
 ;
 -- Table SALESMAN이(가) 생성되었습니다.
 
 -- 실습 6)
-SELECT *
-  FROM salesman
+SELECT s.*
+  FROM salesman s
 ;
 
 -- 실습 7)
